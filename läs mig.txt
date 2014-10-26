@@ -1,0 +1,71 @@
+---------------------------------
+          Experiment 1.0
+ Skrivet av Samuel Genheden 2008
+     (C) 2008 Samuel Genheden
+----------------------------------
+
+------------------     
+    Innehåll
+------------------
+
+1. Systemkrav
+2. Användning
+3. Ordfil
+4. Inställningar
+
+------------------
+  1. Systemkrav
+------------------
+
+Programmet är skrivet i java så Java Runtime behövs installeras eftersom det inte skickas
+med programmet. Gå till www.java.com för att hämta senaste versionen om det inte redan
+är installerat.
+
+Om java är associerat med .jar filer startas programmet genom att dubbelklicka på experiment.jar
+
+Om inte försök associera programmet java med .jar filer; programmet som skall användas heter javaw.exe
+och ligger i en mapp som kan heta C:\Program\Java\jre1.6.0_05\bin\ beroende på var java är installerat och
+vilken version av Java Runtime som är installerat.
+
+-----------------
+  2. Användning
+-----------------
+
+Starta klockan genom att trycka på A- eller ƒ-tangenten. Dessa två tangenter är inställningsbara (se avsnitt 4).
+Ett slumpmässigt ord/påstående från ordfilen visas på skärmen och klockan uppdateras varje tusendelssekund.
+För att stanna klockan tryck på A- (sannt) eller ƒ- (falskt) tangenten. Då stoppas klockan och ett meddelande
+visas längst ner i fönstret.
+
+När ett visst antal ord/påståenden har visats på skärmen så stoppas programmet och ett meddelande visas
+för användaren. Detta antal och meddelandet som visas är inställningsbara (se avsnitt 4). Om programmet skall
+användas igen tryck på R (reset)-tangenten för att "starta" om programmet. Då sparas även program-loggen till
+filen log.txt
+
+När programmet avslutas sparas automatiskt en program-logg till filen log.txt. Den innehåller förutom datum
+när loggen gjordes även tre fält för varje ord som visats: 
+  1) Ett index för det ord som visas, vilket pekar på en viss rad i ordfilen
+  2) Vilket meddelande (sant/falskt) som visades på skärmen när användaren stoppade klockan
+  3) Vad klockan visade när den stoppades. 
+För att manuellt spara program-loggen till fil tryck ner L-tangenten.
+
+----------------
+  3. Ordfil
+----------------
+
+Ord eller påståenden som skall visas i programmet återfinns i filen ord.txt. Den kan automatiskt redigeras
+för att lägga till eller ta bort ord. Om ett påstående blir så långt att det kanske inte får plats på
+en rad på skärmen omslut det ordet med taggarna <HTML> och </HTML>, då kommer automatisk radbrytning utföras.
+
+------------------
+ 4. Inställningar
+------------------
+
+Ett antal variabler är inställningsbara och dessa återfinns i filen settings.dat. 
+Dessa inställningar kan göras:
+  1) Meddelande. Det meddelande som visas då max antal ord/påståenden har visats på skärmen
+  2) Sant_med. Det meddelande som skall visas när användaren trycker på sant-tangenten
+  3) Falskt_med. Det meddelande som skall visas när användaren trycker på falskt-tangenten
+  4) Sant_tang. Sant-tangenten, ursprungligen A
+  5) Falskt_tang. Falsk-tangenten, ursprungligen ƒ
+  6) Visa_klockan. Om klockan skall visas medans den går
+  7) Max_ord. Det max antal ord/påståenden som skall visas på skärmen.
